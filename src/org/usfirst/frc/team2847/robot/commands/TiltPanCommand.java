@@ -48,7 +48,7 @@ public class TiltPanCommand extends Command {
 			break;
 		case 3:
 			panAngle = panAngle - 0.1;
-			Robot.tiltpan.setPan(panAngle);
+			Robot.tiltpan.setBoth(tiltAngle, panAngle);
 			break;
 		case 4:
 			panAngle = panAngle - 0.1;

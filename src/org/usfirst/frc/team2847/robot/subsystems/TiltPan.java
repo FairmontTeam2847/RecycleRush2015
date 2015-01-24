@@ -1,8 +1,5 @@
 package org.usfirst.frc.team2847.robot.subsystems;
 
-import org.usfirst.frc.team2847.robot.RobotMap;
-
-import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
@@ -18,19 +15,11 @@ public class TiltPan extends Subsystem {
 		// setDefaultCommand(new MySpecialCommand());
 	}
 
-	Servo tilt = new Servo(RobotMap.tiltServo);
-	Servo pan = new Servo(RobotMap.panServo);
-
-	public void setPan(double val) {
-		pan.setAngle(val);
-	}
-
-	public void setTilt(double val) {
-		tilt.setAngle(val);
-	}
+	// Servo tilt = new Servo(RobotMap.tiltServo);
+	// Servo pan = new Servo(RobotMap.panServo);
 
 	public void setBoth(double t, double p) {
-		tilt.setAngle(t);
-		pan.setAngle(p);
+		// tilt.setAngle(t);
+		// pan.setAngle(p);
 	}
 }
