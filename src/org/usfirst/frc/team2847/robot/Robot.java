@@ -4,7 +4,6 @@ import org.usfirst.frc.team2847.robot.commands.autoCommand;
 import org.usfirst.frc.team2847.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team2847.robot.subsystems.Elevator;
 import org.usfirst.frc.team2847.robot.subsystems.Fork;
-import org.usfirst.frc.team2847.robot.subsystems.TiltPan;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -21,7 +20,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends IterativeRobot {
 
-	public static final TiltPan tiltpan = new TiltPan();
+	// public static final TiltPan tiltpan = new TiltPan();
 	public static final Fork fork = new Fork();
 	public static final Drivetrain drivetrain = new Drivetrain();
 	public static final Elevator elevator = new Elevator();

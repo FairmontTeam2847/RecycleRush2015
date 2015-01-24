@@ -20,13 +20,16 @@ public class Elevator extends Subsystem {
 	}
 
 	Talon elevator = new Talon(RobotMap.elevatorMotor);
+	Talon elevatorB = new Talon(RobotMap.elevatorBMotor);
 
 	public void torro(double vel) {
 		elevator.set(vel);
+		elevatorB.set(vel);
 	}
 
 	public void nothing() {
 		elevator.set(0);
+		elevatorB.set(0);
 	}
 
 }

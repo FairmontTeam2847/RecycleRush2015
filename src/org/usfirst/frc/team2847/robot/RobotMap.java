@@ -9,8 +9,8 @@ package org.usfirst.frc.team2847.robot;
 public class RobotMap {
 
 	// OPERATOR CONTROLS
-	public static final int driveJoy = 1;
-	public static final int gamepadJoy = 2;
+	public static final int driveJoy = 0;
+	public static final int gamepadJoy = 1;
 
 	public static final int forkOpenButton = 1;
 	public static final int forkCloseButton = 2;
@@ -18,20 +18,21 @@ public class RobotMap {
 	public static final int liftDownButton = 4;
 
 	// moving parts
-	public static final int frontRightMotor = 1;
+	public static final int frontRightMotor = 3;
 	public static final int frontLeftMotor = 2;
-	public static final int rearRightMotor = 3;
-	public static final int rearLeftMotor = 4;
+	public static final int rearRightMotor = 1;
+	public static final int rearLeftMotor = 0;
 
-	public static final int elevatorMotor = 5;
+	public static final int elevatorMotor = 4;
+	public static final int elevatorBMotor = 5;
 
 	public static final int panServo = 0;
 	public static final int tiltServo = 1;
 
-	public static final int forkPistons[] = { 2, 4 };
+	public static final int forkPistons[] = { 0, 1 };
 
 	// custom speeds
-	public static final double liftSpeed = 0.8;
+	public static final double liftSpeed = 1;
 
 	// PID LOOP
 	public static final double Kp = 4;
