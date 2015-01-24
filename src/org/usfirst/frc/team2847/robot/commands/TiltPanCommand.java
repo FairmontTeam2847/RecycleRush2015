@@ -34,46 +34,45 @@ public class TiltPanCommand extends Command {
 	protected void execute() {
 		int pov = Robot.oi.fPOV();
 		switch (pov) {
+		case -1:
+			Robot.tiltpan.setBoth(tiltAngle, panAngle);
+			break;
 		case 0:
+			tiltAngle = tiltAngle - 0.1;
 			Robot.tiltpan.setBoth(tiltAngle, panAngle);
 			break;
 		case 1:
 			tiltAngle = tiltAngle - 0.1;
+			panAngle = panAngle - 0.1;
 			Robot.tiltpan.setBoth(tiltAngle, panAngle);
 			break;
 		case 2:
-			tiltAngle = tiltAngle - 0.1;
 			panAngle = panAngle - 0.1;
 			Robot.tiltpan.setBoth(tiltAngle, panAngle);
 			break;
 		case 3:
 			panAngle = panAngle - 0.1;
+			tiltAngle = tiltAngle + 0.1;
 			Robot.tiltpan.setBoth(tiltAngle, panAngle);
 			break;
 		case 4:
-			panAngle = panAngle - 0.1;
 			tiltAngle = tiltAngle + 0.1;
 			Robot.tiltpan.setBoth(tiltAngle, panAngle);
 			break;
 		case 5:
 			tiltAngle = tiltAngle + 0.1;
+			panAngle = panAngle + 0.1;
 			Robot.tiltpan.setBoth(tiltAngle, panAngle);
 			break;
 		case 6:
-			tiltAngle = tiltAngle + 0.1;
 			panAngle = panAngle + 0.1;
 			Robot.tiltpan.setBoth(tiltAngle, panAngle);
 			break;
 		case 7:
 			panAngle = panAngle + 0.1;
-			Robot.tiltpan.setBoth(tiltAngle, panAngle);
-			break;
-		case 8:
-			panAngle = panAngle + 0.1;
 			tiltAngle = tiltAngle - 0.1;
 			Robot.tiltpan.setBoth(tiltAngle, panAngle);
 			break;
-
 		}
 	}
 
