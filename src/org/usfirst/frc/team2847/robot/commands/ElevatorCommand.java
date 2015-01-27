@@ -30,8 +30,8 @@ public class ElevatorCommand extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	protected void execute() {
 		if (run) {
-			Robot.elevator.torro(RobotMap.liftSpeed * dir);
-
+			Robot.elevator.torro(RobotMap.liftSpeed * dir
+					* Robot.oi.getJoyThrottle());
 		} else {
 			Robot.elevator.nothing();
 		}
