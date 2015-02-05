@@ -14,8 +14,8 @@ public class RobotMap {
 
 	public static final int forkOpenButton = 1;
 	public static final int forkCloseButton = 2;
-	public static final int liftUpButton = 3;
-	public static final int liftDownButton = 4;
+	public static final int liftUpButton = 5;
+	public static final int liftDownButton = 3;
 
 	// moving parts
 	public static final int frontRightMotor = 3;
