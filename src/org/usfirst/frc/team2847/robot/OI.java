@@ -2,6 +2,7 @@ package org.usfirst.frc.team2847.robot;
 
 import org.usfirst.frc.team2847.robot.commands.ElevatorCommand;
 import org.usfirst.frc.team2847.robot.commands.ForkCommand;
+import org.usfirst.frc.team2847.robot.commands.MagicElevator;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -19,6 +20,8 @@ public class OI {
 	Button bForkO = new JoystickButton(driveJoy, RobotMap.forkOpenButton),
 			bForkC = new JoystickButton(driveJoy, RobotMap.forkCloseButton),
 			bElevatorU = new JoystickButton(driveJoy, RobotMap.liftUpButton),
+			bMajixU = new JoystickButton(driveJoy, RobotMap.majixLiftUp),
+			bMajixD = new JoystickButton(driveJoy, RobotMap.majixLiftDown),
 			bElevatorD = new JoystickButton(driveJoy, RobotMap.liftDownButton);
 
 	public OI() {
@@ -29,6 +32,9 @@ public class OI {
 		bElevatorU.whenReleased(new ElevatorCommand(false, 0));
 		bElevatorD.whenPressed(new ElevatorCommand(true, -1));
 		bElevatorD.whenReleased(new ElevatorCommand(false, 0));
+
+		bMajixU.whenPressed(new MagicElevator(1));
+		bMajixD.whenPressed(new MagicElevator(-1));
 	}
 
 	public double getJoyX() {

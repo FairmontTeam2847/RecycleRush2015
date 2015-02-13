@@ -38,6 +38,7 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 
 		SmartDashboard.putData("Subsystems", drivetrain);
+		SmartDashboard.putData("ele", elevator);
 
 		// instantiate the command used for the autonomous period
 		autonomousCommand = new autoCommand();

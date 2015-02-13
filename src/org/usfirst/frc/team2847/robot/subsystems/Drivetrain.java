@@ -40,7 +40,7 @@ public class Drivetrain extends PIDSubsystem {
 	}
 
 	public void mecDrive(double x, double y, double rot) {
-		drive.mecanumDrive_Cartesian(x, y, rot, 0);
+		drive.mecanumDrive_Cartesian(-x, y, rot, 0);
 	}
 
 	protected double returnPIDInput() {

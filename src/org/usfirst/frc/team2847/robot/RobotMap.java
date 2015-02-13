@@ -16,12 +16,14 @@ public class RobotMap {
 	public static final int forkCloseButton = 2;
 	public static final int liftUpButton = 5;
 	public static final int liftDownButton = 3;
+	public static final int majixLiftUp = 11;
+	public static final int majixLiftDown = 9;
 
 	// moving parts
-	public static final int frontRightMotor = 3;
-	public static final int frontLeftMotor = 2;
-	public static final int rearRightMotor = 1;
-	public static final int rearLeftMotor = 0;
+	public static final int frontRightMotor = 0;
+	public static final int frontLeftMotor = 1;
+	public static final int rearRightMotor = 3;
+	public static final int rearLeftMotor = 2;
 
 	public static final int elevatorMotor = 4;
 	public static final int elevatorBMotor = 5;
@@ -46,6 +48,7 @@ public class RobotMap {
 	public static final int leftEncB = 2;
 	public static final int rightEncA = 3;
 	public static final int rightEncB = 4;
+	public static final int hallA = 0;
 
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
