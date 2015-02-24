@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.command.Command;
 public class ForkCommand extends Command {
 
 	boolean run;
+	boolean done;
 
 	public ForkCommand(boolean forkit) {
 		// Use requires() here to declare subsystem dependencies
@@ -37,7 +38,9 @@ public class ForkCommand extends Command {
 
 	// Make this return true when this Command no longer needs to run execute()
 	protected boolean isFinished() {
-		return false;
+		done = (run == Robot.fork.isForkOpen()) ? true : false;
+
+		return done;
 	}
 
 	// Called once after isFinished returns true

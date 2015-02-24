@@ -43,6 +43,10 @@ public class Drivetrain extends PIDSubsystem {
 		drive.mecanumDrive_Cartesian(-x, y, rot, 0);
 	}
 
+	public void manDrive(double lo, double ro) {
+		drive.setLeftRightMotorOutputs(lo, ro);
+	}
+
 	protected double returnPIDInput() {
 		// Return your input value for the PID loop
 		// e.g. a sensor, like a potentiometer:

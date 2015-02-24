@@ -17,19 +17,23 @@ public class Fork extends Subsystem {
 		// Set the default command for a subsystem here.
 		// setDefaultCommand(new MySpecialCommand());
 
-		}
+	}
 
 	Solenoid forkerOpen = new Solenoid(RobotMap.forkPistons[0]);
 	Solenoid forkerClose = new Solenoid(RobotMap.forkPistons[1]);
-	
+
 	public void openFork() {
 		forkerOpen.set(true);
 		forkerClose.set(false);
-		
-	}
-	public void closeFork() {
-		 forkerOpen.set(false);
-		 forkerClose.set(true);
 
+	}
+
+	public void closeFork() {
+		forkerOpen.set(false);
+		forkerClose.set(true);
+	}
+
+	public boolean isForkOpen() {
+		return forkerOpen.get();
 	}
 }
