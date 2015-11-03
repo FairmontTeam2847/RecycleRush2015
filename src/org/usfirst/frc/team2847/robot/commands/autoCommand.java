@@ -25,7 +25,7 @@ public class autoCommand extends CommandGroup {
 		// a CommandGroup containing them would require both the chassis and the
 		// arm.
 		addSequential(new ForkCommand(true));
-		addSequential(new MagicTimeDrive(2.3, 0.5));
+		addSequential(new MagicTimeDrive(1.5, 0.5));
 		addSequential(new ForkCommand(false));
 	}
 }

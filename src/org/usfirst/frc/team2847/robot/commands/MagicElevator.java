@@ -19,6 +19,8 @@ public class MagicElevator extends Command {
 	int ioff;
 	boolean ibool;
 
+	boolean state;
+
 	public MagicElevator(int setpoint) {
 		// Use requires() here to declare subsystem dependencies
 		requires(Robot.elevator);
@@ -29,6 +31,7 @@ public class MagicElevator extends Command {
 	protected void initialize() {
 		System.out.println(this);
 		tcount = mySetpoint;
+		mySetpoint = 0;
 		go = 0;
 		ion = 0;
 		ioff = 0;
@@ -37,44 +40,43 @@ public class MagicElevator extends Command {
 
 	// Called repeatedly when this Command is scheduled to run
 	protected void execute() {
-		count = count + tcount;
-
-		if (Robot.elevator.isHallSet()) {
-			ion = ion++;
-			ioff = 0;
-		} else if (!Robot.elevator.isHallSet()) {
-			ioff = ioff++;
-			ion = 0;
-		}
-		if (ion > 100) {
-			ibool = true;
-		}
-		if (ioff > 100) {
-			ibool = false;
-		}
-
-		if (count > 0 && Robot.elevator.isHallSet()) {
-			count = (count - 1);
-			ibool = false;
-		} else if (count < 0 && Robot.elevator.isHallSet()) {
-			count = (count + 1);
-			ibool = false;
-		}
-
-		if (count >= 1) {
-			go = 1;
-		} else if (count <= -1) {
-			go = -1;
-		}
-		Robot.elevator.torro(go);
-
-		if (count != 0) {
-			done = false;
-		} else if (count == 0) {
-			done = true;
-		}
-		tcount = 0;
-		update();
+		// count = count + tcount;
+		// tcount = 0;
+		// if (Robot.elevator.isHallSet()) {
+		// ion = ion++;
+		// ioff = 0;
+		// } else if (!Robot.elevator.isHallSet()) {
+		// ioff = ioff++;
+		// ion = 0;
+		// }
+		// if (ion > 100) {
+		// ibool = true;
+		// }
+		// if (ioff > 100) {
+		// ibool = false;
+		// }
+		//
+		// if (count > 0 && Robot.elevator.isHallSet()) {
+		// count = (count - 1);
+		// ibool = false;
+		// } else if (count < 0 && Robot.elevator.isHallSet()) {
+		// count = (count + 1);
+		// ibool = false;
+		// }
+		//
+		// if (count >= 1) {
+		// go = 1;
+		// } else if (count <= -1) {
+		// go = -1;
+		// }
+		// Robot.elevator.torro(go);
+		//
+		// if (count != 0) {
+		// done = false;
+		// } else if (count == 0) {
+		// done = true;
+		// }
+		// update();
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
@@ -91,7 +93,7 @@ public class MagicElevator extends Command {
 		SmartDashboard.putNumber("ion", ion);
 		SmartDashboard.putNumber("ioff", ioff);
 		SmartDashboard.putNumber("count", count);
-		SmartDashboard.putBoolean("hall", Robot.elevator.isHallSet());
+		// SmartDashboard.putBoolean("hall", Robot.elevator.isHallSet());
 	}
 
 	// Called when another command which requires one or more of the same

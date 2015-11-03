@@ -2,7 +2,8 @@ package org.usfirst.frc.team2847.robot;
 
 import org.usfirst.frc.team2847.robot.commands.ElevatorCommand;
 import org.usfirst.frc.team2847.robot.commands.ForkCommand;
-import org.usfirst.frc.team2847.robot.commands.MagicElevator;
+import org.usfirst.frc.team2847.robot.commands.MagicTimeDrive;
+import org.usfirst.frc.team2847.robot.commands.gotoLevel;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -20,8 +21,14 @@ public class OI {
 	Button bForkO = new JoystickButton(driveJoy, RobotMap.forkOpenButton),
 			bForkC = new JoystickButton(driveJoy, RobotMap.forkCloseButton),
 			bElevatorU = new JoystickButton(driveJoy, RobotMap.liftUpButton),
-			bMajixU = new JoystickButton(driveJoy, RobotMap.majixLiftUp),
-			bMajixD = new JoystickButton(driveJoy, RobotMap.majixLiftDown),
+			// bMajixU = new JoystickButton(driveJoy, RobotMap.majixLiftUp),
+			// bMajixD = new JoystickButton(driveJoy, RobotMap.majixLiftDown),
+			bLift0 = new JoystickButton(driveJoy, RobotMap.gotoLift0),
+			bLift1 = new JoystickButton(driveJoy, RobotMap.gotoLift1),
+			bLift2 = new JoystickButton(driveJoy, RobotMap.gotoLift2),
+			bLiftR = new JoystickButton(driveJoy, RobotMap.gotoLiftR),
+			btest = new JoystickButton(driveJoy, 8),
+			btest2 = new JoystickButton(driveJoy, 10),
 			bElevatorD = new JoystickButton(driveJoy, RobotMap.liftDownButton);
 
 	public OI() {
@@ -32,9 +39,15 @@ public class OI {
 		bElevatorU.whenReleased(new ElevatorCommand(false, 0));
 		bElevatorD.whenPressed(new ElevatorCommand(true, -1));
 		bElevatorD.whenReleased(new ElevatorCommand(false, 0));
+		btest.whenPressed(new MagicTimeDrive(3, .25));
+		btest2.whenPressed(new MagicTimeDrive(3, -.25));
 
-		bMajixU.whenPressed(new MagicElevator(1));
-		bMajixD.whenPressed(new MagicElevator(-1));
+		// bMajixU.whenPressed(new MagicElevator(1));
+		// bMajixD.whenPressed(new MagicElevator(-1));
+		bLift0.whenPressed(new gotoLevel(0));
+		bLift1.whenPressed(new gotoLevel(1));
+		bLift2.whenPressed(new gotoLevel(2));
+		bLiftR.whenPressed(new gotoLevel(88));
 	}
 
 	public double getJoyX() {

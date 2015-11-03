@@ -12,12 +12,16 @@ public class RobotMap {
 	public static final int driveJoy = 0;
 	public static final int gamepadJoy = 1;
 
-	public static final int forkOpenButton = 1;
-	public static final int forkCloseButton = 2;
+	public static final int forkOpenButton = 2;
+	public static final int forkCloseButton = 1;
 	public static final int liftUpButton = 5;
 	public static final int liftDownButton = 3;
 	public static final int majixLiftUp = 11;
 	public static final int majixLiftDown = 9;
+	public static final int gotoLift0 = 7;
+	public static final int gotoLift1 = 9;
+	public static final int gotoLift2 = 11;
+	public static final int gotoLiftR = 12;
 
 	// moving parts
 	public static final int frontRightMotor = 0;
