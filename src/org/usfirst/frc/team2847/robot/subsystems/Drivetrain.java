@@ -30,17 +30,15 @@ public class Drivetrain extends PIDSubsystem {
 		setAbsoluteTolerance(500);
 		encL.reset();
 		encR.reset();
-
 	}
 
 	public void initDefaultCommand() {
 		// Set the default command for a subsystem here.
 		setDefaultCommand(new JoystickDrive());
-
 	}
 
 	public void mecDrive(double x, double y, double rot) {
-		drive.mecanumDrive_Cartesian(-x, y, rot, 0);
+		drive.mecanumDrive_Cartesian(x, y, rot, 0);
 	}
 
 	public void manDrive(double lo, double ro) {

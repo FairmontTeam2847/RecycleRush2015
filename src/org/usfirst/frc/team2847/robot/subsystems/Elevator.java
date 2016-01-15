@@ -48,7 +48,7 @@ public class Elevator extends Subsystem {
 			returnState = true;
 		}
 		if (withinRange != isHallSet() && !withinRange) {
-			withinRange = true; // record this exe for next exe
+			withinRange = true; // record this exec for next exec
 			if (direction == -1) {
 				currentLevel++;
 			} else if (direction == 1) {

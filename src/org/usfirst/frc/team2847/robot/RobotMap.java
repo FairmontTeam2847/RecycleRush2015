@@ -26,8 +26,8 @@ public class RobotMap {
 	// moving parts
 	public static final int frontRightMotor = 0;
 	public static final int frontLeftMotor = 1;
-	public static final int rearRightMotor = 3;
-	public static final int rearLeftMotor = 2;
+	public static final int rearRightMotor = 2;
+	public static final int rearLeftMotor = 3;
 
 	public static final int elevatorMotor = 4;
 	public static final int elevatorBMotor = 5;
